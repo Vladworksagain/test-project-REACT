@@ -1,0 +1,928 @@
+@import "fonts"
+@import "variables"
+@import "node_modules/css-reset-and-normalize/scss/reset-and-normalize"
+@import "default"
+@import "node_modules/locomotive-scroll/dist/locomotive-scroll.min"
+
+body, html
+    font-size: 10px
+    font-weight: 400
+    background-color: #241537
+
+.header
+    background-color: #ffffff
+    padding-bottom: 25.5rem
+    overflow: hidden
+    position: relative
+
+    .header-top
+
+        &__wrapper
+            max-width: 79.1rem
+            width: 100%
+            min-height: 15.4rem
+            max-height: 20rem
+            background: url(../images/header-images/header-top-bg.png) no-repeat center center
+            background-size: cover
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            margin-bottom: 4.2rem
+            left: -15%
+
+            @media screen and (max-width: 868px)
+                background-position: center right
+
+            @media screen and (max-width: 560px)
+                padding: 0 1rem
+                left: -6%
+                justify-content: flex-start
+
+            @media screen and (max-width: 400px)
+                min-height: 9.1rem
+                left: -8%
+                width: 111%
+                align-items: flex-start
+                padding-top: 1rem
+
+                &:after
+                    content: ""
+                    position: absolute
+                    background: url(../images/header-images/header-small-green-planet.png) no-repeat center center
+                    width: 2.2rem
+                    height: 2.2rem
+                    bottom: 12%
+                    right: 30%
+        &__title
+            font-family: $Cocon
+            font-size: 5rem
+            line-height: 4rem
+            text-shadow: -2px 4px 0 rgba(102, 64, 87, 0.31)
+            color: #ffffff
+            display: block
+            text-transform: uppercase
+
+            @media screen and (max-width: 560px)
+                font-size: 3rem
+                line-height: 3rem
+
+        &__line
+            display: block
+            text-indent: 2.5rem
+
+        &__image
+            width: auto
+            position: absolute
+            right: 7%
+            height: auto
+            bottom: 0
+
+            @media screen and (max-width: 400px)
+                bottom: -45%
+                right: -2%
+
+    .header-title
+        font-family: $Cocon
+        font-size: 3.6rem
+        line-height: 4rem
+        color: #241537
+        text-transform: uppercase
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin-bottom: 3.7rem
+        position: relative
+        text-align: center
+
+        @media screen and (max-width: 540px)
+            font-size: 1.8rem
+            line-height: 2.2rem
+
+        &:before
+            content: ""
+            position: absolute
+            background: url("../images/header-images/header-cloud-small.png") no-repeat center center
+            max-width: 17rem
+            width: 100%
+            max-height: 7.1rem
+            height: 100%
+            left: 5%
+            bottom: 0
+
+            @media screen and (max-width: 860px)
+                display: none
+
+        @media screen and (max-width: 320px)
+
+            &:after
+                content: ""
+                background: url("../images/header-images/header-cloud-small.png") no-repeat center center
+                width: 7.4rem
+                height: 3.1rem
+                background-size: cover
+                position: absolute
+                left: -18%
+
+    .header-title__arrow
+        margin-bottom: 1rem
+
+        &:after
+            content: ""
+            background: url(../images/header-images/header-title-ele.png) no-repeat center center
+            width: 16.5rem
+            height: .8rem
+            background-size: cover
+            display: block
+            margin: .7rem auto 0 auto
+
+    .header-image__placeholder
+        position: absolute
+        top: -60%
+        right: 4%
+
+        &:after
+            content: ""
+            position: absolute
+            background: url("../images/header-images/header-small-green-planet.png") no-repeat center center
+            width: 2.2rem
+            height: 2.2rem
+            left: 54%
+            top: -20%
+
+            @media screen and (max-width: 868px)
+                content: none
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+            @media screen and (max-width: 320px)
+                width: 50%
+
+        @media screen and (max-width: 868px)
+            display: none
+
+        @media screen and (max-width: 320px)
+            display: block
+            top: 126%
+            right: -45%
+
+    .header-subtitle
+        color: #fdb000
+
+    .header-main__content
+        background: url("../images/header-images/header-section-validation.png") no-repeat center center
+        width: 100%
+        max-width: 85.5rem
+        height: auto
+        margin: 0 auto
+        background-size: contain
+        padding: 8.6rem 35.8rem 21.6rem 9.2rem
+        position: relative
+        left: -10%
+
+        @media screen and (max-width: 868px)
+            left: 0
+            padding: 11.6rem 0 9.6rem 9.2rem
+
+        @media screen and (max-width: 540px)
+            background-size: 131% auto
+            margin: 0 -2rem
+            width: auto
+            padding: 13rem 1rem 10rem 1rem
+            //margin: 0 -2rem
+            //width: auto
+
+        @media screen and (max-width: 400px)
+            padding: 10rem 2rem 5rem 2rem
+
+        &:before
+            content: ""
+            position: absolute
+            background: url("../images/header-images/header-big-green-planet.png") no-repeat center center
+            width: 7.4rem
+            height: 7.4rem
+            left: -4%
+            top: 8%
+
+            @media screen and (max-width: 540px)
+                left: -10%
+                top: -10%
+
+        &:after
+            content: ""
+            position: absolute
+            background: url("../images/header-images/header-red-planet.png") no-repeat center center
+            width: 3.6rem
+            height: 3.6rem
+            top: 2%
+            right: 8%
+
+            @media screen and (max-width: 868px)
+                content: none
+
+            @media screen and (max-width: 320px)
+                content: ""
+                position: absolute
+                background: url("../images/header-images/header-orange-planet.png") no-repeat center center
+                width: 10.5rem
+                height: 10.5rem
+                background-size: cover
+                top: 1rem
+                right: 0
+
+
+        .header-form__description
+            color: #ffffff
+            font-family: $Exo
+            font-size: 2.4rem
+            line-height: 3.5rem
+            margin-bottom: 1.9rem
+
+            span
+                color: #ffd34e
+                font-weight: 600
+
+            @media screen and (max-width: 540px)
+                font-size: 1.6rem
+                line-height: 1rem
+                text-align: center
+                margin-bottom: 1rem
+
+        .header-main__form
+            max-width: 40.5rem
+            min-width: 40.5rem
+            width: 100%
+            background-color: rgba(255, 255, 255, .1)
+            border-radius: 1rem
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            padding: 1.3rem 1.5rem 1.8rem 0
+
+            @media screen and (max-width: 540px)
+                align-items: center
+                margin: auto
+                min-width: 100%
+                padding: 1.7rem 3.4rem
+                position: relative
+
+        //.form-btn
+
+    .header-bg__bottom
+        width: 100%
+        height: auto
+        position: absolute
+        left: 0
+        right: 0
+        bottom: -.2rem
+        pointer-events: none
+        user-select: none
+
+        @media screen and (max-width: 540px)
+            left: -50%
+            right: auto
+
+        @media screen and (max-width: 320px)
+            left: -104%
+
+        &:before
+            content: ""
+            position: absolute
+            background: url("../images/header-images/header-orange-planet.png") no-repeat center center
+            width: 10.5rem
+            height: 10.5rem
+            background-size: cover
+            top: -7%
+            right: 24%
+
+            @media screen and (max-width: 868px)
+                content: none
+
+            @media screen and (max-width: 320px)
+                content: ""
+                position: absolute
+                background: url("../images/header-images/header-red-planet.png") no-repeat center center
+                width: 3.6rem
+                height: 3.6rem
+                left: 186%
+
+        &:after
+            content: ""
+            position: absolute
+            background: url("../images/header-images/header-violet-planet.png") no-repeat center center
+            background-size: cover
+            width: 9rem
+            height: 9rem
+            bottom: 15%
+            left: 53%
+
+            @media screen and (max-width: 868px)
+                content: none
+
+            @media screen and (max-width: 320px)
+                content: ""
+                left: 108%
+                bottom: 10%
+
+    .header-bg__image
+        object-fit: cover
+        width: 100%
+        height: 100%
+
+        @media screen and (max-width: 540px)
+            height: auto
+            width: 170%
+
+        @media screen and (max-width: 320px)
+            height: auto
+            width: 250%
+
+    .left-side__bg
+        position: absolute
+        right: 51%
+        top: 45%
+        user-select: none
+        pointer-events: none
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+        @media screen and (max-width: 540px)
+            display: none
+
+    .right-side__bg
+        position: absolute
+        right: 28%
+        top: 53%
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+        @media screen and (max-width: 860px)
+            display: none
+
+
+.offers
+    background: linear-gradient(to top, #510564 0%, #241537 50%, #241537 100%)
+    overflow: hidden
+
+    @media screen and (max-width: 1170px)
+        padding: 6rem 0 11.8rem 0
+
+    @media screen and (max-width: 540px)
+        padding: 6rem 0 0 0
+
+    &-selection__branches
+        margin-bottom: 11.5rem
+        max-width: 96.5rem
+        position: relative
+
+        @media screen and (max-width: 1170px)
+            max-width: 100%
+
+        @media screen and (max-width: 885px)
+            margin-bottom: 4.5rem
+            z-index: 1
+
+        span
+            font-family: $Cocon
+            font-size: 3rem
+            line-height: 5.8rem
+            text-transform: uppercase
+            color: #ebdae6
+            border-radius: 2.9rem
+            background-color: #5a116a
+            max-width: 39.9rem
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-left: auto
+
+            @media screen and (max-width: 1170px)
+                max-width: 100%
+                position: relative
+                z-index: 2
+
+            @media screen and (max-width: 540px)
+                padding: 0 2rem
+                font-size: 2.2rem
+
+            @media screen and (max-width: 320px)
+
+                &:before
+                    content: ""
+                    background: url("../images/main-content-images/mob-main-stars.png") no-repeat center center
+                    width: 9.1rem
+                    height: 3.1rem
+                    background-size: cover
+                    position: absolute
+                    top: -150%
+                    left: 25%
+
+    &-wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: -1.2rem
+        flex-wrap: wrap
+        padding-bottom: 8.5rem
+        position: relative
+
+        @media screen and (max-width: 540px)
+            padding-bottom: 6.2rem
+
+        &:after
+            content: ""
+            position: absolute
+            background: url("../images/main-content-images/offers-small-star.png") no-repeat center center
+            width: 1.7rem
+            height: 1.8rem
+            right: 3%
+            top: 0
+
+    &-item
+        background-color: #401751
+        border-radius: 50%
+        max-width: 26.6rem
+        max-height: 26.5rem
+        padding: 5rem 5rem 5.5rem 5rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        margin: 1.2rem
+        align-self: stretch
+        position: relative
+
+        .offers-item__image
+            fill: #d6b8c6
+            margin-bottom: 3.1rem
+            max-width: 6.7rem
+            height: 6.1rem
+
+        .offers-item__text
+            font-family: $Exo
+            font-size: 2rem
+            color: rgba(255, 255, 255, .8)
+            line-height: 2.5rem
+
+            span
+                color: #ffd34e
+
+        @media screen and (max-width: 595px)
+            padding: 5.5rem 7rem 5.5rem 7rem
+
+        @media screen and (max-width: 540px)
+
+            &:nth-child(2)
+
+                &:before
+                    content: ""
+                    position: absolute
+                    background: url(../images/header-images/header-big-green-planet.png) no-repeat center center
+                    width: 7.4rem
+                    height: 7.4rem
+                    left: 0
+                    top: 8%
+
+                    @media screen and (max-width: 320px)
+                        left: -17%
+                        top: -7%
+
+                &:after
+                    content: ""
+                    position: absolute
+                    background: url("../images/main-content-images/offers-small-star.png") no-repeat center center
+                    width: 1.7rem
+                    height: 1.8rem
+                    left: 10%
+                    bottom: -2%
+
+            &:nth-child(3)
+
+                &:before
+                    content: ""
+                    position: absolute
+                    background: url("../images/main-content-images/offers-small-orange-planet.png") no-repeat center center
+                    width: 2.9rem
+                    height: 2.9rem
+                    top: -30%
+                    right: -20%
+                    position: absolute
+                    top: 4%
+                    right: -8%
+
+                &:after
+                    content: ""
+                    background: url("../images/main-content-images/offers-cloud_right.png") no-repeat center center
+                    background-size: cover
+                    width: 7.4rem
+                    height: 3.1rem
+                    bottom: -5%
+                    right: -5%
+                    opacity: 0.3
+                    position: absolute
+
+            &:last-of-type
+
+                &:after
+                    content: ""
+                    position: absolute
+                    background: url("../images/main-content-images/offers-stars-top-left.png") no-repeat center center
+                    width: 8.4rem
+                    height: 4.5rem
+                    bottom: -10%
+                    right: 0
+
+    .offers-placeholder__image
+        position: absolute
+        top: 0
+        right: 57rem
+
+        @media screen and (max-width: 868px)
+            right: 35%
+            top: -100%
+
+        @media screen and (max-width: 400px)
+            right: 0
+            top: -220%
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .offers-selection__arrow
+        position: absolute
+
+        @media screen and (max-width: 1175px)
+            display: none
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+    .fourth__arrow
+        right: -10%
+        top: 50%
+
+    .third__arrow
+        right: -1%
+
+    .second__arrow
+        right: 42%
+        top: 72%
+
+    .first__arrow
+        left: 16%
+        top: 25%
+
+.offers-main__info
+    font-family: $Exo
+    font-size: 3rem
+    line-height: 3.5rem
+    color: #ebdae6
+    text-align: center
+    max-width: 80rem
+    width: 100%
+    margin: 0 auto
+
+    .offers-first__subtitle
+        color: rgba(255, 211, 78, .8)
+
+    .offers-second__subtitle
+        font-weight: 700
+        color: #ffd34e
+
+    @media screen and (max-width: 540px)
+        font-size: 2.3rem
+        line-height: 3rem
+
+
+.footer
+    position: relative
+    background: linear-gradient(to bottom, #510564 0%, #241537 50%, #241537 100%)
+    padding: 11.8rem 0 38rem 0
+    overflow: hidden
+
+    @media screen and (max-width: 768px)
+        padding: 11.8rem 0 41rem 0
+
+    @media screen and (max-width: 540px)
+        padding: 4rem 0 41rem 0
+
+    @media screen and (max-width: 320px)
+        padding: 4rem 0 30rem 0
+
+    .footer-flash__bg
+        position: absolute
+        top: -44%
+        left: 2%
+        width: auto
+        height: auto
+        pointer-events: none
+        user-select: none
+
+        @media screen and (max-width: 768px)
+            display: none
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+    .footer-feedback
+        position: relative
+        display: flex
+        justify-content: flex-end
+        align-items: flex-start
+        width: 100%
+        left: -5rem
+        margin-bottom: 4.7rem
+        z-index: 1
+
+        @media screen and (max-width: 1024px)
+            left: 0
+
+        @media screen and (max-width: 768px)
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
+        &:before
+            content: ""
+            background: url("../images/main-content-images/offers-moon-planet.png") no-repeat center center
+            width: 8.5rem
+            height: 8.5rem
+            position: absolute
+            left: 13%
+            top: 5%
+            background-size: cover
+
+            @media screen and (max-width: 768px)
+                content: none
+
+        &:after
+            content: ""
+            background: url("../images/main-content-images/offers-green-planet.png") no-repeat center center
+            width: 14.2rem
+            height: 14.2rem
+            position: absolute
+            background-size: cover
+            right: 35%
+            bottom: -17%
+
+            @media screen and (max-width: 868px)
+                content: none
+
+        .footer-feedback__form
+            max-width: 37.5rem
+            min-width: 38rem
+            width: 100%
+            background-color: rgba(255, 255, 255, .1)
+            border-radius: 1rem
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            padding: 2.2rem 0 1.8rem 0
+            align-items: center
+            height: 100%
+            position: relative
+
+            @media screen and (max-width: 768px)
+                order: -1
+                min-width: auto
+
+            @media screen and (max-width: 540px)
+                padding: 2rem 4.2rem 1.9rem 4.2rem
+
+            @media screen and (max-width: 400px)
+                width: 100vw
+
+            &:before
+                content: ""
+                position: absolute
+                background: url("../images/main-content-images/offers-stars-top-left.png") no-repeat center center
+                width: 8.4rem
+                height: 4.5rem
+                top: -20%
+                left: -18%
+
+                @media screen and (max-width: 768px)
+                    background: url("../images/main-content-images/offers-small-star.png") no-repeat center center
+                    width: 1.7rem
+                    height: 1.8rem
+                    left: 4%
+                    position: absolute
+
+            &:after
+                content: ""
+                position: absolute
+                background: url("../images/main-content-images/offers-small-orange-planet.png") no-repeat center center
+                width: 2.9rem
+                height: 2.9rem
+                top: -30%
+                right: -20%
+
+                @media screen and (max-width: 768px)
+                    background: url("../images/main-content-images/offers-moon-planet.png") no-repeat center center
+                    width: 8.5rem
+                    height: 8.5rem
+                    background-size: cover
+                    position: absolute
+                    bottom: -28%
+                    top: auto
+                    right: 1%
+
+        .footer-form__btn
+            position: relative
+            @media screen and (max-width: 320px)
+                &:after
+                    content: ""
+                    background: url(../images/main-content-images/offers-small-star.png) no-repeat center center
+                    width: 1.7rem
+                    height: 1.8rem
+                    left: -30%
+                    position: absolute
+                    bottom: -100%
+
+        .footer-left__side
+            bottom: -15rem
+            right: -1rem
+            position: relative
+
+            @media screen and (max-width: 768px)
+                bottom: -9rem
+                right: 6rem
+
+            img
+                object-fit: cover
+                width: 100%
+                height: 100%
+
+            &:before
+                content: ""
+                position: absolute
+                background: url(../images/main-content-images/offers-astronaut-say.png) no-repeat center center
+                background-size: contain
+                width: 10.7rem
+                height: 7.1rem
+                left: -1%
+                top: -40%
+
+            @media screen and (max-width: 768px)
+
+                &:after
+                    content: ""
+                    background: url("../images/main-content-images/mob-content-astro.png") no-repeat center center
+                    width: 5.1rem
+                    height: 12.3rem
+                    position: absolute
+                    left: 100%
+                    top: -35%
+                    background-size: cover
+
+        .footer-right__side
+            position: relative
+            left: 1rem
+            bottom: 5rem
+
+            @media screen and (max-width: 768px)
+                display: none
+
+            &:before
+                content: ""
+                background: url("../images/main-content-images/offers-small-star.png") no-repeat center center
+                width: 1.7rem
+                height: 1.8rem
+                position: absolute
+                left: 15%
+                top: 20%
+
+            img
+                object-fit: cover
+                width: 100%
+                height: 100%
+
+    .footer-big__cloud
+        position: absolute
+        left: 0
+        bottom: 0
+
+        @media screen and (max-width: 1024px)
+            display: none
+
+        &:after
+            content: ""
+            background: url("../images/main-content-images/offers-stars-bottom-left.png") no-repeat center center
+            width: 8.4rem
+            height: 4.5rem
+            position: absolute
+            bottom: -10rem
+            left: 12rem
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+    .footer-small__cloud
+        position: absolute
+        top: -26%
+        right: -7%
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+        @media screen and (max-width: 1240px)
+            display: none
+
+    .footer-description
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        position: relative
+
+        @media screen and (max-width: 768px)
+            padding-top: 0
+            flex-direction: column
+
+        .footer-description__title
+            font-family: $Exo
+            font-size: 3.6rem
+            line-height: 3.5rem
+            color: rgba(255, 211, 78, .8)
+            text-align: center
+
+
+            @media screen and (max-width: 768px)
+                font-size: 3rem
+
+        .footer-line__title
+            font-weight: 700
+            color: #ffd34e
+            text-transform: uppercase
+
+        .footer-description__placeholder
+            position: relative
+            bottom: 4rem
+
+            img
+                object-fit: cover
+                width: 100%
+                height: 100%
+
+                @media screen and (max-width: 768px)
+                    width: 50%
+
+            @media screen and (max-width: 768px)
+                order: -1
+                right: -15rem
+                bottom: 3rem
+
+            @media screen and (max-width: 320px)
+
+                &:before
+                    content: ""
+                    background: url(../images/main-content-images/offers-stars-bottom-left.png) no-repeat center center
+                    width: 8.4rem
+                    height: 4.5rem
+                    position: absolute
+                    top: -40%
+                    left: 20%
+
+    .footer-bottom__bg
+        width: 100%
+        height: auto
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+
+        @media screen and (max-width: 768px)
+            left: -100%
+
+        @media screen and (max-width: 320px)
+            left: -138%
+            height: 25%
+
+        img
+            object-fit: cover
+            width: 100%
+            height: 100%
+
+            @media screen and (max-width: 768px)
+                width: auto
+
